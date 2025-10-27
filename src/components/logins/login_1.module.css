@@ -1,0 +1,75 @@
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.tarjet__form {
+  width: 30vw;
+  height: 50vh;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.formulario {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+input,
+.btnIniciarSesion {
+  width: 80%;
+  margin: 10px 0 0 0;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* borde suave */
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.15
+  ); /* ligeramente más visible que el fondo */
+  color: #ffffff;
+}
+
+input:focus,
+.btnIniciarSesion:focus {
+  outline: 1px solid #1b89ec;
+}
+
+.btnIniciarSesion {
+  margin-top: 30px;
+  background-color: #1b89ec;
+}
+
+.btnIniciarSesion:hover {
+  background-color: #1475d0;
+  cursor: pointer;
+}
+
+.btnIniciarSesion:hover,
+input:focus {
+  transform: scale(1.02);
+}

@@ -1,0 +1,32 @@
+.dashboard {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  overflow: hidden;
+  background-color: #111217;
+  font-family: "Exo", sans-serif;
+  grid-template-columns: 5% 75% 20%;
+  grid-template-rows: 70px 2fr 0px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main sidebar2"
+    "footer footer footer";
+  gap: 10px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  z-index: 10;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar2 {
+  grid-area: sidebar2;
+}

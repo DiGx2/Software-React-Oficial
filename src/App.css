@@ -1,0 +1,14 @@
+.fondo {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #3a3a3a, #252525, #121212);
+}
+
+.containerLogin {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 50px);
+}
