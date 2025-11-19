@@ -5,83 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificado de Inspección Técnica Vehicular</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            color: black;
-            background-color: white;
+        :root {
+            --primary-color: #000;
+            --bg-color: #fff;
+            --border-color: #000;
+            --header-font: Arial, sans-serif;
+            --font-size-base: 12px;
+            --font-size-title: 16px;
+            --font-size-header: 18px;
         }
+
+        body {
+            font-family: var(--header-font);
+            margin: 0 auto;
+            padding: 20px;
+            color: var(--primary-color);
+            background-color: var(--bg-color);
+            max-width: 1200px;
+            font-size: var(--font-size-base);
+            line-height: 1.4;
+        }
+
         .header {
             text-align: center;
             margin-bottom: 20px;
         }
+
         .header h1 {
-            font-size: 18px;
+            font-size: var(--font-size-header);
             margin: 5px 0;
         }
+
         .header p {
-            font-size: 12px;
             margin: 2px 0;
         }
+
         .title {
             text-align: center;
-            font-size: 16px;
+            font-size: var(--font-size-title);
             font-weight: bold;
             margin: 20px 0;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
-            font-size: 12px;
         }
+
         th, td {
-            border: 1px solid black;
-            padding: 5px;
+            border: 1px solid var(--border-color);
+            padding: 8px;
             text-align: left;
+            vertical-align: top;
         }
+
         th {
             background-color: #f2f2f2;
             font-weight: bold;
         }
+
         .no-border {
             border: none;
         }
+
         .center {
             text-align: center;
         }
+
         .bold {
             font-weight: bold;
         }
+
         .observations {
             margin-bottom: 20px;
-            font-size: 12px;
         }
+
         .result {
-            border: 1px solid black;
+            border: 1px solid var(--border-color);
             padding: 10px;
             margin-bottom: 20px;
         }
+
         .result table {
             border: none;
+            width: 100%;
         }
-        .result td {
+
+        .result td, .result th {
             border: none;
+            padding: 5px;
         }
+
         .signature {
             text-align: right;
-            font-size: 12px;
+            margin-top: 20px;
         }
+
         .footer {
             text-align: right;
-            font-size: 12px;
             margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 10px; /* Smaller font for mobile */
+            }
+
+            .header h1 {
+                font-size: 16px;
+            }
+
+            .title {
+                font-size: 14px;
+            }
+
+            table {
+                font-size: 10px;
+            }
+
+            th, td {
+                padding: 5px;
+            }
+
+            /* Make tables scrollable horizontally on small screens */
+            .table-container {
+                overflow-x: auto;
+            }
+
+            /* Stack result table for better readability */
+            .result table {
+                display: block;
+            }
+
+            .result th, .result td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        /* Print-friendly styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: var(--font-size-base);
+            }
+
+            .table-container {
+                overflow: visible;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <!-- Logo placeholder - since no image, using text -->
         <h1>CENTRO DE INSPECCION TECNICA VEHICULAR S.R.L.</h1>
         <p>Autorizada con Resolución Directoral N° 165-2020-MTC/17.03</p>
         <p>Dirección: Av. Félix B Cárdenas N° 601, Distrito de Santa María, Provincia de Huaura-Lima</p>
@@ -93,337 +174,337 @@
         N°: C-2025-069-07-005003
     </div>
 
-    <table>
-        <tr>
-            <th>Tipo de Inspección</th>
-            <td>Ordinaria Y Complementaria</td>
-            <th>Fecha de Inspección</th>
-            <td>28/06/2025</td>
-            <th>Informe de Inspección N°</th>
-            <td>00000620-V1</td>
-        </tr>
-    </table>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Tipo de Inspección</th>
+                <td>Ordinaria Y Complementaria</td>
+                <th>Fecha de Inspección</th>
+                <td>28/06/2025</td>
+                <th>Informe de Inspección N°</th>
+                <td>00000620-V1</td>
+            </tr>
+        </table>
+    </div>
 
-    <table>
-        <tr>
-            <th colspan="6">I - Características Del Vehículo</th>
-        </tr>
-        <tr>
-            <th>1</th>
-            <th>Placa</th>
-            <td>AMX518</td>
-            <th>7</th>
-            <th>Combustible</th>
-            <td>SIES ELF</td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <th>Categoría</th>
-            <td>NT</td>
-            <th>8</th>
-            <th>VIN N° de Serie</th>
-            <td>MMB14FKE6H46154</td>
-        </tr>
-        <tr>
-            <th>3</th>
-            <th>Marca</th>
-            <td>CHEVROLET</td>
-            <th>9</th>
-            <th>N° de Motor</th>
-            <td>B6Z14061119</td>
-        </tr>
-        <tr>
-            <th>4</th>
-            <th>Modelo</th>
-            <td>510</td>
-            <th>10</th>
-            <th>Carrocería</th>
-            <td>PICK UP</td>
-        </tr>
-        <tr>
-            <th>5</th>
-            <th>Año de fab.</th>
-            <td>2014</td>
-            <th>11</th>
-            <th>Marca Carrocería</th>
-            <td>CHEVROLET</td>
-        </tr>
-        <tr>
-            <th>6</th>
-            <th>Kilometraje</th>
-            <td>208371</td>
-            <th>12</th>
-            <th>N° ejes/N° ruedas</th>
-            <td>2/4</td>
-        </tr>
-        <tr>
-            <td colspan="6">&nbsp;</td>
-        </tr>
-        <tr>
-            <th colspan="2">Datos Del Vehículo</th>
-            <th>Frenómetro</th>
-            <th>Alineador</th>
-            <th>Analizador u Opacímetro</th>
-            <th>Regloscopio Luxómetro</th>
-        </tr>
-        <tr>
-            <td colspan="2">TECNIMOTORS S.R.L.</td>
-            <td>Equipo N° 3810</td>
-            <td>Equipo N° 5354</td>
-            <td>Equipo N° 354</td>
-            <td>Equipo N° 0999</td>
-        </tr>
-    </table>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th colspan="6">I - Características Del Vehículo</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>Placa</th>
+                <td>AMX518</td>
+                <th>7</th>
+                <th>Combustible</th>
+                <td>SIES ELF</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>Categoría</th>
+                <td>NT</td>
+                <th>8</th>
+                <th>VIN N° de Serie</th>
+                <td>MMB14FKE6H46154</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>Marca</th>
+                <td>CHEVROLET</td>
+                <th>9</th>
+                <th>N° de Motor</th>
+                <td>B6Z14061119</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>Modelo</th>
+                <td>510</td>
+                <th>10</th>
+                <th>Carrocería</th>
+                <td>PICK UP</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <th>Año de fab.</th>
+                <td>2014</td>
+                <th>11</th>
+                <th>Marca Carrocería</th>
+                <td>CHEVROLET</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <th>Kilometraje</th>
+                <td>208371</td>
+                <th>12</th>
+                <th>N° ejes/N° ruedas</th>
+                <td>2/4</td>
+            </tr>
+            <tr>
+                <td colspan="6">&nbsp;</td>
+            </tr>
+            <tr>
+                <th colspan="2">Datos Del Vehículo</th>
+                <th>Frenómetro</th>
+                <th>Alineador</th>
+                <th>Analizador u Opacímetro</th>
+                <th>Regloscopio Luxómetro</th>
+            </tr>
+            <tr>
+                <td colspan="2">TECNIMOTORS S.R.L.</td>
+                <td>Equipo N° 3810</td>
+                <td>Equipo N° 5354</td>
+                <td>Equipo N° 354</td>
+                <td>Equipo N° 0999</td>
+            </tr>
+        </table>
+    </div>
 
-    <table>
-        <tr>
-            <th colspan="12">II - Resultados Obtenidos</th>
-        </tr>
-        <tr>
-            <th colspan="5">Freno De Servicio</th>
-            <th colspan="3">Prueba De Frenos Estacionamiento</th>
-            <th colspan="2">Freno De Emergencia</th>
-            <th colspan="2">Prueba De Fuerza</th>
-        </tr>
-        <tr>
-            <th>Ejes</th>
-            <th>Peso Frenado (KN)</th>
-            <th>Fuerza KN</th>
-            <th>Desequil. Eficacia</th>
-            <th>Resultado</th>
-            <th>Ejes</th>
-            <th>Peso (Kg)</th>
-            <th>Fuerza trans. (KN)</th>
-            <th>Eficacia %</th>
-            <th>Resultado</th>
-            <th>Ejes</th>
-            <th>Fuerza Bruto (KN)</th>
-        </tr>
-        <tr>
-            <td>1°</td>
-            <td>124.00</td>
-            <td>3.62</td>
-            <td>3.75</td>
-            <td>3.47</td>
-            <td>1°</td>
-            <td>670.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td></td>
-            <td>1°</td>
-            <td>124.00</td>
-        </tr>
-        <td>2°</td>
-        <td>874.00</td>
-        <td>2.88</td>
-        <td>2.74</td>
-        <td>4.86</td>
-        <td>2°</td>
-        <td>470.00</td>
-        <td>1.25</td>
-        <td>1.00</td>
-        <td>29.74</td>
-        <td>APROBADO</td>
-        <td>2°</td>
-        <td>874.00</td>
-        </tr>
-        <tr>
-            <td>3°</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>3°</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td></td>
-            <td>3°</td>
-            <td>0.00</td>
-        </tr>
-        <tr>
-            <td>4°</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>4°</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td></td>
-            <td>4°</td>
-            <td>0.00</td>
-        </tr>
-        <tr>
-            <td>5°</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>5°</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td>0.00</td>
-            <td></td>
-            <td>5°</td>
-            <td>0.00</td>
-        </tr>
-        <tr>
-            <td colspan="5">61.81 APROBADO</td>
-            <td colspan="3"></td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-        </tr>
-    </table>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th colspan="12">II - Resultados Obtenidos</th>
+            </tr>
+            <tr>
+                <th colspan="5">Freno De Servicio</th>
+                <th colspan="4">Prueba De Frenos Estacionamiento</th>
+                <th colspan="3">Freno De Emergencia</th>
+            </tr>
+            <tr>
+                <th>Ejes</th>
+                <th>Peso Frenado (KN)</th>
+                <th>Fuerza KN</th>
+                <th>Desequil. %</th>
+                <th>Eficacia %</th>
+                <th>Resultado</th>
+                <th>Ejes</th>
+                <th>Peso (Kg)</th>
+                <th>Fuerza trans. (KN)</th>
+                <th>Eficacia %</th>
+                <th>Resultado</th>
+                <th>Ejes</th>
+            </tr>
+            <tr>
+                <td>1°</td>
+                <td>124.00</td>
+                <td>3.62</td>
+                <td>3.75</td>
+                <td>3.47</td>
+                <td rowspan="5">61.81<br>APROBADO</td>
+                <td>1°</td>
+                <td>670.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td></td>
+                <td>1°</td>
+            </tr>
+            <tr>
+                <td>2°</td>
+                <td>874.00</td>
+                <td>2.88</td>
+                <td>2.74</td>
+                <td>4.86</td>
+                <td>2°</td>
+                <td>470.00</td>
+                <td>1.25</td>
+                <td>1.00</td>
+                <td>29.74<br>APROBADO</td>
+                <td>2°</td>
+            </tr>
+            <tr>
+                <td>3°</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>3°</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td></td>
+                <td>3°</td>
+            </tr>
+            <tr>
+                <td>4°</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>4°</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td></td>
+                <td>4°</td>
+            </tr>
+            <tr>
+                <td>5°</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>5°</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td></td>
+                <td>5°</td>
+            </tr>
+        </table>
+    </div>
 
-    <table>
-        <tr>
-            <th colspan="8">Prueba De Alineamiento</th>
-            <th colspan="4">Prueba De Luces</th>
-        </tr>
-        <tr>
-            <th>Ejes</th>
-            <th>Desviación (m/Km)</th>
-            <th>Resultado</th>
-            <th>Ejes</th>
-            <th>Medida Obtenida</th>
-            <th>Resultado</th>
-            <th>Tipo de Luz</th>
-            <th>Máxima (cd)</th>
-            <th>Alineamiento (cd)</th>
-            <th>Resultado</th>
-            <th>Delantera (%)</th>
-            <th>Posterior (%)</th>
-        </tr>
-        <tr>
-            <td>1°</td>
-            <td>-0.38</td>
-            <td>APROBADO</td>
-            <td>1°</td>
-            <td>4.59</td>
-            <td>APROBADO</td>
-            <td>Bajas</td>
-            <td>21.30</td>
-            <td>28.00</td>
-            <td>APROBADO</td>
-            <td>Izq.</td>
-            <td>88.00</td>
-        </tr>
-        <tr>
-            <td>2°</td>
-            <td>0.00</td>
-            <td>APROBADO</td>
-            <td>2°</td>
-            <td>4.59</td>
-            <td>APROBADO</td>
-            <td>Altas</td>
-            <td>50.00</td>
-            <td>38.00</td>
-            <td>APROBADO</td>
-            <td>Der.</td>
-            <td>87.00</td>
-        </tr>
-        <tr>
-            <td>3°</td>
-            <td>0.00</td>
-            <td></td>
-            <td>3°</td>
-            <td>0.00</td>
-            <td></td>
-            <td>Alta Adicional</td>
-            <td>---</td>
-            <td>---</td>
-            <td>---</td>
-            <td>Desv.</td>
-            <td>1.90</td>
-        </tr>
-        <tr>
-            <td>4°</td>
-            <td>0.00</td>
-            <td></td>
-            <td>4°</td>
-            <td>0.00</td>
-            <td></td>
-            <td>Nebilinas</td>
-            <td>---</td>
-            <td>---</td>
-            <td>Resultado: APROBA</td>
-            <td>Resultado</td>
-            <td>APROBA</td>
-        </tr>
-        <tr>
-            <td>5°</td>
-            <td>0.00</td>
-            <td></td>
-            <td>5°</td>
-            <td>0.00</td>
-            <td></td>
-            <td colspan="4">(1) Indica si desviación ha sido de luz a izq/DER + / - Fsu +</td>
-        </tr>
-    </table>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th colspan="3">Prueba De Alineamiento</th>
+                <th colspan="4">Prueba De Neumático</th>
+                <th colspan="2">Prueba De Luces</th>
+                <th colspan="3">Prueba De Suspensión (%)</th>
+            </tr>
+            <tr>
+                <th>Ejes</th>
+                <th>Desviación (m/Km)</th>
+                <th>Resultado</th>
+                <th>Ejes</th>
+                <th>Medida Obtenida</th>
+                <th>Resultado</th>
+                <th>Tipo de Luz</th>
+                <th>Máxima (cd)</th>
+                <th>Alineamiento (cd)</th>
+                <th>Resultado</th>
+                <th>Delantera (%)</th>
+                <th>Posterior (%)</th>
+            </tr>
+            <tr>
+                <td>1°</td>
+                <td>-0.38</td>
+                <td>APROBADO</td>
+                <td>1°</td>
+                <td>4.59</td>
+                <td>APROBADO</td>
+                <td>Bajas</td>
+                <td>21.30</td>
+                <td>28.00</td>
+                <td>APROBADO</td>
+                <td>Izq.</td>
+                <td>88.00 Izq. 82.00</td>
+            </tr>
+            <tr>
+                <td>2°</td>
+                <td>0.00</td>
+                <td>APROBADO</td>
+                <td>2°</td>
+                <td>4.59</td>
+                <td>APROBADO</td>
+                <td>Altas</td>
+                <td>50.00</td>
+                <td>38.00</td>
+                <td>APRCBADO</td>
+                <td>Der.</td>
+                <td>87.00 Der. 81.00</td>
+            </tr>
+            <tr>
+                <td>3°</td>
+                <td>0.00</td>
+                <td>APROBADO</td>
+                <td>3°</td>
+                <td>0.00</td>
+                <td></td>
+                <td>Alta Adicional</td>
+                <td>---</td>
+                <td>---</td>
+                <td></td>
+                <td>Desv.</td>
+                <td>1.90 Desv. 1.00</td>
+            </tr>
+            <tr>
+                <td>4°</td>
+                <td>0.00</td>
+                <td></td>
+                <td>4°</td>
+                <td>0.00</td>
+                <td></td>
+                <td>Nebilinas</td>
+                <td>---</td>
+                <td>---</td>
+                <td>Resultado APROBA</td>
+                <td>Resultado</td>
+                <td>APROBA</td>
+            </tr>
+            <tr>
+                <td>5°</td>
+                <td>0.00</td>
+                <td></td>
+                <td>5°</td>
+                <td>0.00</td>
+                <td></td>
+                <td colspan="4">(1) Indica si desviación ha sido de luz a izq/DER + / - Fsu +</td>
+            </tr>
+        </table>
+    </div>
 
-    <table>
-        <tr>
-            <th colspan="8">Emisiones</th>
-            <th colspan="3">Sonoras</th>
-        </tr>
-        <tr>
-            <th>DE GASES</th>
-            <th>12 Acale (°C)</th>
-            <th>RPM</th>
-            <th>CO Ralentí (%)</th>
-            <th>CO + CO2 Ralentí (%)</th>
-            <th>HC Ralentí (ppm)</th>
-            <th>CO Acel (%)</th>
-            <th>HC Acel (ppm)</th>
-            <th>Resultado</th>
-            <th>Emisiones</th>
-            <th>Sonómetro</th>
-        </tr>
-        <tr>
-            <td>(on/apice para</td>
-            <td></td>
-            <td>2586</td>
-            <td>0.00</td>
-            <td>---</td>
-            <td>---</td>
-            <td>0.00</td>
-            <td>---</td>
-            <td>APROBADO</td>
-            <td>SONORAS</td>
-            <td>-dB</td>
-        </tr>
-        <tr>
-            <td>vehículos eléctricos)</td>
-            <td></td>
-            <td>0.78</td>
-            <td>HC Ralentí (ppm)</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>74.60</td>
-        </tr>
-        <tr>
-            <td colspan="11">Resultado: APROBADO</td>
-        </tr>
-    </table>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th colspan="9">Emisiones</th>
+                <th colspan="2">Sonoras</th>
+            </tr>
+            <tr>
+                <th>DE GASES</th>
+                <th>° Acale (°C)</th>
+                <th>80</th>
+                <th>CO Ralentí (%)</th>
+                <th>CO + CO2 Ralentí (%)</th>
+                <th>HC Ralentí (ppm)</th>
+                <th>CO Acel (%)</th>
+                <th>HC Acel (ppm)</th>
+                <th>Resultado</th>
+                <th>Emisiones</th>
+                <th>Sonómetro</th>
+            </tr>
+            <tr>
+                <td>(on/apice para</td>
+                <td></td>
+                <td>2586</td>
+                <td>0.00</td>
+                <td>---</td>
+                <td>---</td>
+                <td>0.00</td>
+                <td>---</td>
+                <td>APROBADO</td>
+                <td>SONORAS</td>
+                <td>-dB</td>
+            </tr>
+            <tr>
+                <td>vehículos eléctricos)</td>
+                <td></td>
+                <td>0.78</td>
+                <td>HC Ralentí (ppm)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>74.60 Resultado APROBADO</td>
+            </tr>
+        </table>
+    </div>
 
-    <table>
-        <tr>
-            <th>IV - DEFECTOS ENCONTRADOS</th>
-            <th>INTERPRETACION DE DEFECTOS</th>
-            <th>CLASIFICACION</th>
-        </tr>
-        <tr>
-            <td>NO REGISTRA FALLAS</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>IV - DEFECTOS ENCONTRADOS</th>
+                <th>INTERPRETACION DE DEFECTOS</th>
+                <th>CLASIFICACION</th>
+            </tr>
+            <tr>
+                <td>NO REGISTRA FALLAS</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
 
     <div class="observations">
         OBSERVACIONES:<br>
@@ -444,7 +525,6 @@
     </div>
 
     <div class="signature">
-        <p>APROBADO</p>
         <p>Firma del Ingeniero Supervisor</p>
         <p>INGENIERO MECANICO</p>
         <p>Reg. CIP N° 204235</p>
